@@ -17,14 +17,14 @@ class DatabaseSeeder extends Seeder
             [
                 'name'          => 'Admin',
                 'email'         => 'admin@mail.com',
-                'password'      => bcrypt('codeastro.com'),
+                'password'      => bcrypt('admin1234'),
                 'created_at'    => date("Y-m-d H:i:s"),
 				'role'          => 'admin'
             ],
             [
                 'name'          => 'Staff',
                 'email'         => 'staff@mail.com',
-                'password'      => bcrypt('codeastro.com'),
+                'password'      => bcrypt('staff1234'),
                 'created_at'    => date("Y-m-d H:i:s"),
 				'role'          => 'staff'
             ],
