@@ -25,10 +25,10 @@ class CreateMasterTable extends Migration
             $table->string('spart_number');
             $table->string('classification');
             $table->string('image')->default(null);
-            $table->string('updated_by')->unsigned();
+            $table->integer('updated_by')->unsigned();
             $table->timestamps();
 
-            $table->foreign('updated_by')->references('nama')->on('employees')->onDelete('cascade');
+            $table->foreign('updated_by')->references('id')->on('employees')->onDelete('cascade');
 
         });
     }

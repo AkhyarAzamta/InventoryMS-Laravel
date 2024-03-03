@@ -15,12 +15,12 @@ class CreateStockTable extends Migration
     {
         Schema::create('stock', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('item_code')->unsigned();
+            $table->integer('item_code')->unsigned();
             $table->string('stock_in');
             $table->string('stock_out');
             $table->timestamps();
 
-            $table->foreign('item_code')->references('item_code')->on('master')->onDelete('cascade');
+            $table->foreign('item_code')->references('id')->on('master')->onDelete('cascade');
 
         });
     }
